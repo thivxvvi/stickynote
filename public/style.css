@@ -1,8 +1,8 @@
 /* public/style.css */
 body {
   font-family: Arial, sans-serif;
-  background: rgb(87,180,84);
-  background: radial-gradient(circle, rgba(87,180,84,1) 0%, rgba(32,69,18,1) 100%);
+  background: rgb(247,162,162);
+  background: radial-gradient(circle, rgba(247,162,162,1) 0%, rgba(241,230,230,1) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,14 +17,26 @@ body {
 }
 
 h1 {
-  color: #f4f0f0;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  word-spacing: 6px;
+  color: #fafafa;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  position: ;
 }
 
 #messageForm {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #messageInput {
+  border-radius: 10px;
+  border: 1px;
   width: 100%;
   height: 100px;
   padding: 10px;
@@ -32,16 +44,19 @@ h1 {
 }
 
 button {
-  padding: 10px 10px;
-  background-color: #f5f5f5;
-  border-radius: 5px
-  border: 1px;
-  cursor: pointer;
-  font-size: 16px;
+  font-family: impact;
+  color: #030303 !important;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 0px solid #3866A3;
+  background: #EE9F9F;
+  background: linear-gradient(to top, #EE9F9F, #FFF9F5);
 }
 
 button:hover {
-  background-color: #fffa77;
+  color: #000000 !important;
+  background: #FFD8CF;
 }
 
 #notesContainer {
@@ -66,6 +81,8 @@ button:hover {
 
 /* public/style.css */
 #toInput {
+  border-radius: 10px;
+  height: 10px;
   width: 10%;
   padding: 5px;
   font-size: 16px;
