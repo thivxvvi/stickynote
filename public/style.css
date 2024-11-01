@@ -1,8 +1,8 @@
 /* public/style.css */
 body {
   font-family: Arial, sans-serif;
-  background: rgb(247,162,162);
-  background: radial-gradient(circle, rgba(247,162,162,1) 0%, rgba(241,230,230,1) 100%);
+  background: rgb(201,199,199);
+  background: radial-gradient(circle, rgba(201,199,199,1) 0%, rgba(241,230,230,1) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,19 +31,19 @@ body {
 }
 
 button {
-  font-family: 'Arial Black', Gadget, sans-serif;';
-  color: #9b9292 !important;
-  font-size: 12px;
-  padding: 10px 25px;
-  border-radius: 10px;
+font-family: 'trebuchet ms';
+  color: #050E19 !important;
+  font-size: 10px;
+  text-shadow: 1px 1px 0px #9C99A3;
+  box-shadow: 5px 5px 6px #C1C3C7;
+  padding: 6px 22px;
+  border-radius: 8px;
   border: 0px solid #3866A3;
-  background: #EE9F9F;
-  background: linear-gradient(to top, #EE9F9F, #FFF9F5);
+  background: #F0F0F0;
 }
-
 button:hover {
-  color: #000000 !important;
-  background: #FFD8CF;
+  color: #14396A !important;
+  background: #BDBDBD;
 }
 
 #notesContainer {
@@ -54,7 +54,7 @@ button:hover {
 }
 
 .note {
-  background-color: #fffa77;
+  background-color: #ffffff;
   padding: 15px;
   width: 150px;
   min-height: 100px;
@@ -67,7 +67,7 @@ button:hover {
 }
 
 /* public/style.css */
-#toInput {
+#FromInput {
   border-radius: 10px;
   height: 10px;
   width: 10%;
@@ -79,4 +79,15 @@ button:hover {
 .note .to {
   font-weight: bold;
   color: #333;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  input, textarea, button {
+    font-size: 0.9em;
+  }
 }
