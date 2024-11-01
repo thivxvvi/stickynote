@@ -16,19 +16,6 @@ body {
   text-align: center;
 }
 
-h1 {
-  font-family: "Arial Black", Gadget, sans-serif;
-  font-size: 20px;
-  letter-spacing: 0.4px;
-  word-spacing: 6px;
-  color: #fafafa;
-  font-weight: 400;
-  text-decoration: none solid rgb(68, 68, 68);
-  font-style: normal;
-  font-variant: normal;
-  text-transform: uppercase;
-  position: ;
-}
 
 #messageForm {
   margin-bottom: 30px;
@@ -44,9 +31,9 @@ h1 {
 }
 
 button {
-  font-family: impact;
-  color: #030303 !important;
-  font-size: 14px;
+  font-family: 'Arial Black', Gadget, sans-serif;';
+  color: #9b9292 !important;
+  font-size: 12px;
   padding: 10px 25px;
   border-radius: 10px;
   border: 0px solid #3866A3;
