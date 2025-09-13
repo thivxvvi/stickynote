@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3000;
 
 // MongoDB URI and Target Database/Collection Configuration
-const mongoUri = '';  // Replace with your MongoDB URI
+const mongoUri = 'mongodb+srv://tristanhernandez006:sci1d@freedomwall.y8wem.mongodb.net/?retryWrites=true&w=majority&appName=Freedomwall';  // Replace with your MongoDB URI
 const dbName = 'Freedomwall';
 const collectionName = 'messages';
 
@@ -58,7 +58,7 @@ app.post('/messages', async (req, res) => {
   }
 });
 
- 
+
 // Start the server after connecting to MongoDB
 connectToMongoDB().then(() => {
   app.listen(PORT, () => {
