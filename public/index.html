@@ -1,22 +1,42 @@
-<!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=0.1">
-  <title>Miro Sticky Notes</title>
+  <title>SCI1D</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Import Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="1D.png">
+  <!-- Or if you have an .ico file -->
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+
+  <style>
+    .page-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      text-align: center;
+      margin: 20px 0;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
-<body>
-  
-  <div class="container">
-    <form id="messageForm">
-      <input type="text" id="FromInput" placeholder="From:" required>
-      <textarea id="messageInput" placeholder="Write your message here..." required></textarea>
-      <button type="submit">Post Note</button>
-    </form>
-    <div id="notesContainer"></div>
-  </div>
-  <script src="script.js"></script>
-</body>
+  <body>
+    <!-- Title -->
+    <h1 class="page-title">SCI-1D FREEDOMWALL</h1>
+
+    <div class="container">
+      <form id="messageForm">
+        <input type="text" id="ToInput" placeholder="To:" required>
+        <textarea id="messageInput" placeholder="Write your message here..." required></textarea>
+        <button type="submit">Post Note</button>
+      </form>
+      <div id="notesContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
