@@ -1,9 +1,11 @@
 // public/script.js
 document.addEventListener("DOMContentLoaded", () => {
   const messageForm = document.getElementById("messageForm");
-  const toInput = document.getElementById("FromInput");
+  const toInput = document.getElementById("ToInput");
   const messageInput = document.getElementById("messageInput");
   const notesContainer = document.getElementById("notesContainer");
+
+  const MESSAGE_LIMIT = 70; // max characters allowed
 
   // Fetch existing messages and display them
   async function fetchMessages() {
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     messages.forEach(({ to, message }) => {
       const note = document.createElement("div");
       note.className = "note";
-      note.innerHTML = `<div class="to">From: ${to}</div><p>${message}</p>`;
+      note.innerHTML = `<div class="to">To: ${to}</div><p>${message}</p>`;
       notesContainer.appendChild(note);
     });
   }
@@ -27,7 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
   messageForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const to = toInput.value.trim();
-    const message = messageInput.value.trim();
+    let message = messageInput.value.trim();
+
+    if (message.length > MESSAGE_LIMIT) {
+      alert(`Message cannot exceed ${MESSAGE_LIMIT} characters. Currently: ${message.length}`);
+      return;
+    }
+
     if (to && message) {
       const response = await fetch('/messages', {
         method: 'POST',
@@ -46,10 +54,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Live character count + limit
+  messageInput.addEventListener("input", () => {
+    if (messageInput.value.length > MESSAGE_LIMIT) {
+      messageInput.value = messageInput.value.substring(0, MESSAGE_LIMIT);
+      alert(`Maximum ${MESSAGE_LIMIT} characters allowed.`);
+    }
+  });
+
   // Initial fetch of messages
   fetchMessages();
 
   // Poll for new messages every 10 seconds
   setInterval(fetchMessages, 10000);
-
 });
